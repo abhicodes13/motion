@@ -67,13 +67,27 @@ const Read = () => {
           animations and gestures. In this guide, we'll learn how to install
           Motion and take a whirlwind tour of its main features.
         </p>
-      </div>
-      <div className="p-3 text-sm flex items-center justify-center gap-4 bg-black text-white ">
-        {" "}
-        {user && `Welcome  ${user.given_name}`}
-        {user && (
-          <LogoutLink className="bg-blue-700 px-2 py-1">Logout</LogoutLink>
-        )}
+        <p>
+          Modern web development relies heavily on animations to create a
+          dynamic and interesting user experience. Creating animations in React
+          applications can be done using traditional CSS or JavaScript however,
+          it can become very cumbersome. Various libraries like GSAP, React
+          Spring, anime.js, etc were created to combat the ambiguity in creating
+          animations but one worthy to note is Framer Motion. Framer Motion is a
+          famous React animation library that makes constructing complicated
+          animations easier by providing utility animation components as well as
+          hooks. In this article, we will walk you through the features and
+          functionalities of Framer Motion.
+        </p>
+        <p>
+          Motion for React is an animation library that's simple to start and
+          fun to master. It's the only library with a hybrid engine. This means
+          it offers both the hardware accelerated performance of native browser
+          animations, coupled with the limitless potential of JavaScript
+          animations. It's also trusted by Framer to power its amazing no-code
+          animations and gestures. In this guide, we'll learn how to install
+          Motion and take a whirlwind tour of its main features.
+        </p>
       </div>
     </>
   );

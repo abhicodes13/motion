@@ -26,6 +26,7 @@ export const Example = () => {
 };
 
 const Sidebar = () => {
+  const { isAuthenticated, user } = useKindeAuth();
   const [open, setOpen] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -38,9 +39,11 @@ const Sidebar = () => {
       }}
     >
       <TitleSection open={open} />
-      <LogoutLink className="text-sm bg-black block p-2 text-white hover:opacity-90 ">
-        Logout
-      </LogoutLink>
+      {isAuthenticated && (
+        <LogoutLink className="text-sm bg-black block p-2 text-white hover:opacity-90 ">
+          Logout
+        </LogoutLink>
+      )}
 
       <ToggleClose open={open} setOpen={setOpen} />
     </motion.nav>
@@ -185,7 +188,7 @@ const ToggleClose = ({ open, setOpen }) => {
 };
 
 const ExampleContent = () => (
-  <div className="h-[200vh] w-full">
+  <div className="h-screen w-full overflow-scroll">
     <Read />
   </div>
 );
