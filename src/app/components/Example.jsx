@@ -195,9 +195,9 @@ const ExampleContent = () => {
     damping: 20,
   });
   return (
-    <div>
+    <div className="w-full">
       <motion.div
-        className={`sticky origin-left top-0 w-[100%] h-10 bg-fuchsia-600`}
+        className={`sticky origin-left top-0 h-10 bg-fuchsia-600`}
         style={{
           scaleX: spring,
         }}
