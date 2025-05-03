@@ -12,7 +12,7 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 
 export const Example = () => {
   return (
@@ -90,7 +90,7 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
 };
 
 const TitleSection = ({ open }) => {
-  const { isAuthenticated, user } = useKindeBrowserClient();
+  const { isAuthenticated, user } = useKindeAuth();
 
   return (
     <div className="mb-3 border-b border-slate-300 pb-3">
@@ -105,7 +105,9 @@ const TitleSection = ({ open }) => {
               transition={{ delay: 0.125 }}
             >
               {isAuthenticated && (
-                <span className="block text-xs font-semibold">{user}</span>
+                <span className="block text-xs font-semibold">
+                  {user.given_name}
+                </span>
               )}
               <span className="block text-xs text-slate-500">Pro Plan</span>
             </motion.div>
