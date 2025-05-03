@@ -36,7 +36,7 @@ const Sidebar = () => {
       layout
       className="sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-white p-2"
       style={{
-        width: open ? "225px" : "fit-content",
+        width: open ? "125px md:225px" : "fit-content",
       }}
     >
       <TitleSection open={open} />
