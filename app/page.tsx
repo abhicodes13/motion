@@ -44,10 +44,10 @@ const Page = () => {
         <br />
         <p>
           One of the key features of Framer Motion is its support for shared
-          layout animations through the `layout` prop. This allows components to
+          layout animations through the layout prop. This allows components to
           animate smoothly between layout changes without writing complex
           animations manually. When you toggle visibility or re-arrange elements
-          that use `layout`, Framer Motion interpolates the transformation,
+          that use layout, Framer Motion interpolates the transformation,
           resulting in visually pleasing transitions that enhance user
           experience.
         </p>
