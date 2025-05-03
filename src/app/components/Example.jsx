@@ -188,7 +188,7 @@ const ToggleClose = ({ open, setOpen }) => {
 };
 
 const ExampleContent = () => (
-  <div className="h-[120vh] w-full">
+  <div className="h-screen w-full">
     <Read />
   </div>
 );

@@ -17,7 +17,7 @@ const Read = () => {
   });
   if (!isAuthenticated) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-full overflow-scroll">
         <h1 className="text-2xl font-bold mb-4">Welcome to the Home Page</h1>
         <p className="mb-4">Please log in to access the content.</p>
         <LoginLink className="px-2 py-1 bg-black text-white mb-10">
