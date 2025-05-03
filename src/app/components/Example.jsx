@@ -188,7 +188,7 @@ const ToggleClose = ({ open, setOpen }) => {
 };
 
 const ExampleContent = () => (
-  <div className="h-screen w-full overflow-scroll">
+  <div className="h-auto w-full">
     <Read />
   </div>
 );

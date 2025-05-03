@@ -20,8 +20,12 @@ const Read = () => {
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-2xl font-bold mb-4">Welcome to the Home Page</h1>
         <p className="mb-4">Please log in to access the content.</p>
-        <LoginLink>Login</LoginLink>
-        <RegisterLink>Register</RegisterLink>
+        <LoginLink className="px-2 py-1 bg-black text-white mb-10">
+          Login
+        </LoginLink>
+        <RegisterLink className="px-2 py-1 bg-black text-white">
+          Register
+        </RegisterLink>
       </div>
     );
   }
