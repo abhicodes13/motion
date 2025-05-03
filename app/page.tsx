@@ -25,21 +25,21 @@ const Page = () => {
         <p>
           Framer Motion is a popular animation library for React that provides a
           simple and powerful API for creating smooth animations. It is built on
-          top of the Framer library and leverages the power of the `motion`
+          top of the Framer library and leverages the power of the motion
           component, which acts as a drop-in replacement for standard HTML and
-          SVG elements. By wrapping elements with `motion.div`, `motion.svg`,
-          etc., you can easily apply animations, transitions, and gestures with
-          just a few props.
+          SVG elements. By wrapping elements with motion.div, motion.svg, etc.,
+          you can easily apply animations, transitions, and gestures with just a
+          few props.
         </p>
         <br />
         <p>
           To start using Framer Motion, you need to install it in your React
-          project by running `npm install framer-motion` or `yarn add
-          framer-motion`. Once installed, you can import the `motion` object and
-          begin animating elements using props like `initial`, `animate`,
-          `exit`, and `transition`. This allows for simple and declarative
-          animations such as fading elements in and out, scaling components, or
-          animating position changes.
+          project by running npm install framer-motion or yarn add
+          framer-motion. Once installed, you can import the motion object and
+          begin animating elements using props like initial, animate, exit, and
+          transition. This allows for simple and declarative animations such as
+          fading elements in and out, scaling components, or animating position
+          changes.
         </p>
         <br />
         <p>
@@ -53,17 +53,17 @@ const Page = () => {
         </p>
         <br />
         <p>
-          The `animatePresence` component is another essential feature of Framer
+          The animatePresence component is another essential feature of Framer
           Motion that helps animate components when they enter and exit the DOM.
-          By wrapping conditional components in ``, Framer Motion ensures exit
+          By wrapping conditional components in , Framer Motion ensures exit
           animations are executed before the component is removed from the tree.
           This is especially useful for modals, toasts, and dynamic route
           transitions in Next.js or React Router.
         </p>
         <br />
         <p>
-          Framer Motion supports complex gestures using the `drag`, `hover`,
-          `tap`, and `whileInView` props. With these, you can easily implement
+          Framer Motion supports complex gestures using the drag, hover, tap,
+          and whileInView props. With these, you can easily implement
           interactive UI behavior, such as draggable cards, hover effects for
           buttons, tap animations for mobile, and scroll-based reveal
           animations. The built-in spring physics and inertia-based motion makes
@@ -72,38 +72,37 @@ const Page = () => {
         <br />
         <p>
           For more customized and advanced control over animations, Framer
-          Motion provides powerful hooks like `useAnimation` and
-          `useMotionValue`. `useAnimation` allows you to start and control
-          animations programmatically, which is useful in scenarios like
-          triggering an animation after a delay or on a specific event.
-          Meanwhile, `useMotionValue` lets you track and animate values
-          directly, enabling synchronized motion with gestures or scroll
-          position.
+          Motion provides powerful hooks like useAnimation and useMotionValue.
+          useAnimation allows you to start and control animations
+          programmatically, which is useful in scenarios like triggering an
+          animation after a delay or on a specific event. Meanwhile,
+          useMotionValue lets you track and animate values directly, enabling
+          synchronized motion with gestures or scroll position.
         </p>
 
         <p>
           Framer Motion supports keyframes for defining multiple states in one
-          animation sequence. You can pass an array of values to the `animate`
-          prop, and combine it with a `transition` prop that defines how long
-          each step lasts. This makes it possible to create advanced animations
-          such as bouncing effects, loops, or staggered sequences between
-          multiple states or positions.
+          animation sequence. You can pass an array of values to the animate
+          prop, and combine it with a transition prop that defines how long each
+          step lasts. This makes it possible to create advanced animations such
+          as bouncing effects, loops, or staggered sequences between multiple
+          states or positions.
         </p>
 
         <p>
           Another powerful capability is variants. Variants are a way to define
           multiple animation states in a single object and then refer to them by
-          name using the `variants`, `initial`, and `animate` props. This keeps
-          your code organized and makes it easier to animate groups of elements
-          in a coordinated manner — useful for menu animations or interactive
+          name using the variants, initial, and animate props. This keeps your
+          code organized and makes it easier to animate groups of elements in a
+          coordinated manner — useful for menu animations or interactive
           dashboards.
         </p>
 
         <p>
-          Staggered animations are easy with the `staggerChildren` and
-          `delayChildren` properties inside the `transition` prop. These options
-          are ideal for animating lists or collections of items where each child
-          enters the view sequentially. When used with `AnimatePresence`, these
+          Staggered animations are easy with the staggerChildren and
+          delayChildren properties inside the transition prop. These options are
+          ideal for animating lists or collections of items where each child
+          enters the view sequentially. When used with AnimatePresence, these
           animations also handle exit sequences with equal polish and
           performance.
         </p>
