@@ -2,8 +2,7 @@
 import React from "react";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
-
-import Read from "./components/Read";
+import { redirect } from "next/navigation";
 
 const Page = () => {
   const { isAuthenticated } = useKindeAuth();
@@ -21,11 +20,7 @@ const Page = () => {
       </div>
     );
   }
-  return (
-    <>
-      <Read />
-    </>
-  );
+  redirect("/hello");
 };
 
 export default Page;
