@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Read from "./Read";
+import { useScroll, useSpring } from "framer-motion";
 import {
   FiBarChart,
   FiChevronDown,
@@ -187,4 +188,21 @@ const ToggleClose = ({ open, setOpen }) => {
   );
 };
 
-const ExampleContent = () => <Read />;
+const ExampleContent = () => {
+  const { scrollYProgress } = useScroll();
+  const spring = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 20,
+  });
+  return (
+    <div>
+      <motion.div
+        className={`sticky origin-left top-0 w-[100%] h-10 bg-fuchsia-600`}
+        style={{
+          scaleX: spring,
+        }}
+      ></motion.div>{" "}
+      <Read />
+    </div>
+  );
+};
