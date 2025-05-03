@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import { motion, useScroll, useSpring } from "framer-motion";
 import {
   RegisterLink,
@@ -8,16 +8,25 @@ import {
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 
-const Page = () => {
+const Read = () => {
+  const { user, isAuthenticated } = useKindeAuth();
   const { scrollYProgress } = useScroll();
   const spring = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 20,
   });
-
+  if (!isAuthenticated) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-2xl font-bold mb-4">Welcome to the Home Page</h1>
+        <p className="mb-4">Please log in to access the content.</p>
+        <LoginLink>Login</LoginLink>
+        <RegisterLink>Register</RegisterLink>
+      </div>
+    );
+  }
   return (
     <>
-      <LogoutLink>Logout</LogoutLink>
       <motion.div
         className={`sticky origin-left top-0 w-[100%] h-10 bg-fuchsia-600`}
         style={{
@@ -59,8 +68,15 @@ const Page = () => {
           Motion and take a whirlwind tour of its main features.
         </p>
       </div>
+      <div className="p-3 text-sm flex items-center justify-center gap-4 bg-black text-white ">
+        {" "}
+        {user && `Welcome ${user.given_name}`}
+        {user && (
+          <LogoutLink className="bg-blue-700 px-2 py-1">Logout</LogoutLink>
+        )}
+      </div>
     </>
   );
 };
 
-export default Page;
+export default Read;
