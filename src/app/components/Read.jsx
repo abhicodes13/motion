@@ -70,7 +70,7 @@ const Read = () => {
       </div>
       <div className="p-3 text-sm flex items-center justify-center gap-4 bg-black text-white ">
         {" "}
-        {user && `Welcome ${user.given_name}`}
+        {user && `Welcome  ${user.given_name}`}
         {user && (
           <LogoutLink className="bg-blue-700 px-2 py-1">Logout</LogoutLink>
         )}
