@@ -5,7 +5,7 @@ import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import Read from "./components/Read";
 import { redirect } from "next/navigation";
 
-const Page = async () => {
+const Page = () => {
   const { isAuthenticated } = useKindeAuth();
   if (!isAuthenticated) {
     redirect("https://scrollread.vercel.app/api/auth/login");
