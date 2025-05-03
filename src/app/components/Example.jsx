@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";
 
 export const Example = () => {
   return (
@@ -36,6 +37,9 @@ const Sidebar = () => {
       }}
     >
       <TitleSection open={open} />
+      <LogoutLink className="text-sm bg-black block p-2 text-white hover:opacity-90 ">
+        Logout
+      </LogoutLink>
 
       <ToggleClose open={open} setOpen={setOpen} />
     </motion.nav>
