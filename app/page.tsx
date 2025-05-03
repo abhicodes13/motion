@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
-const page = () => {
+const Page = () => {
   const { scrollYProgress } = useScroll();
   const spring = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -129,4 +130,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
