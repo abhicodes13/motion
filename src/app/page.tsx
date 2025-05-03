@@ -5,7 +5,6 @@ import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import {
   RegisterLink,
   LoginLink,
-  LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import Read from "./components/Read";
 
