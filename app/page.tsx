@@ -23,106 +23,76 @@ const Page = () => {
       </div>
       <div className="m-auto max-w-[700px] p-5">
         <p>
-          Framer Motion is a popular animation library for React that provides a
-          simple and powerful API for creating smooth animations. It is built on
-          top of the Framer library and leverages the power of the motion
-          component, which acts as a drop-in replacement for standard HTML and
-          SVG elements. By wrapping elements with motion.div, motion.svg, etc.,
-          you can easily apply animations, transitions, and gestures with just a
-          few props.
-        </p>
-        <br />
-        <p>
-          To start using Framer Motion, you need to install it in your React
-          project by running npm install framer-motion or yarn add
-          framer-motion. Once installed, you can import the motion object and
-          begin animating elements using props like initial, animate, exit, and
-          transition. This allows for simple and declarative animations such as
-          fading elements in and out, scaling components, or animating position
-          changes.
-        </p>
-        <br />
-        <p>
-          One of the key features of Framer Motion is its support for shared
-          layout animations through the layout prop. This allows components to
-          animate smoothly between layout changes without writing complex
-          animations manually. When you toggle visibility or re-arrange elements
-          that use layout, Framer Motion interpolates the transformation,
-          resulting in visually pleasing transitions that enhance user
-          experience.
-        </p>
-        <br />
-        <p>
-          The animatePresence component is another essential feature of Framer
-          Motion that helps animate components when they enter and exit the DOM.
-          By wrapping conditional components in , Framer Motion ensures exit
-          animations are executed before the component is removed from the tree.
-          This is especially useful for modals, toasts, and dynamic route
-          transitions in Next.js or React Router.
-        </p>
-        <br />
-        <p>
-          Framer Motion supports complex gestures using the drag, hover, tap,
-          and whileInView props. With these, you can easily implement
-          interactive UI behavior, such as draggable cards, hover effects for
-          buttons, tap animations for mobile, and scroll-based reveal
-          animations. The built-in spring physics and inertia-based motion makes
-          interactions feel natural and fluid.
-        </p>
-        <br />
-        <p>
-          For more customized and advanced control over animations, Framer
-          Motion provides powerful hooks like useAnimation and useMotionValue.
-          useAnimation allows you to start and control animations
-          programmatically, which is useful in scenarios like triggering an
-          animation after a delay or on a specific event. Meanwhile,
-          useMotionValue lets you track and animate values directly, enabling
-          synchronized motion with gestures or scroll position.
+          Framer Motion is a powerful and intuitive animation library built
+          specifically for React applications. It allows developers to add
+          fluid, natural-looking animations without needing to rely on low-level
+          CSS keyframes or external JavaScript libraries.
         </p>
 
         <p>
-          Framer Motion supports keyframes for defining multiple states in one
-          animation sequence. You can pass an array of values to the animate
-          prop, and combine it with a transition prop that defines how long each
-          step lasts. This makes it possible to create advanced animations such
-          as bouncing effects, loops, or staggered sequences between multiple
-          states or positions.
+          One of the core strengths of Framer Motion is its declarative syntax,
+          which makes it easy to describe how elements should animate from one
+          state to another. By using props like <code>initial</code>,{" "}
+          <code>animate</code>, and <code>exit</code>, you can define the full
+          lifecycle of an animation with clarity.
         </p>
 
         <p>
-          Another powerful capability is variants. Variants are a way to define
-          multiple animation states in a single object and then refer to them by
-          name using the variants, initial, and animate props. This keeps your
-          code organized and makes it easier to animate groups of elements in a
-          coordinated manner — useful for menu animations or interactive
-          dashboards.
+          Framer Motion provides support for layout transitions, so when the
+          layout of your components changes, animations can handle the shifting
+          positions automatically. This is especially useful for building
+          dynamic interfaces where components reflow based on user interaction.
         </p>
 
         <p>
-          Staggered animations are easy with the staggerChildren and
-          delayChildren properties inside the transition prop. These options are
-          ideal for animating lists or collections of items where each child
-          enters the view sequentially. When used with AnimatePresence, these
-          animations also handle exit sequences with equal polish and
-          performance.
+          The library also includes advanced features like gesture recognition.
+          You can easily implement drag, tap, hover, and pan interactions with
+          minimal code, enabling a more interactive and immersive experience for
+          users across devices.
         </p>
 
         <p>
-          Framer Motion is not just about animations — it is built to scale with
-          teams and performance in mind. It uses hardware-accelerated
-          animations, reduces layout thrashing, and provides intuitive APIs that
-          are developer-friendly. Whether you're building a simple hover effect
-          or an immersive animated experience, Framer Motion delivers
-          high-quality animations with ease in modern React applications.
+          Animation controls in Framer Motion allow for fine-grained control
+          over sequences, delays, and synchronizations. You can use{" "}
+          <code>useAnimation</code> hooks to programmatically start, stop, or
+          orchestrate multiple animations in response to user actions or app
+          state.
         </p>
 
         <p>
-          In summary, Framer Motion is a powerful and flexible animation library
-          for React that simplifies the process of creating complex animations
-          and interactions. With its intuitive API, support for shared layout
-          animations, gesture handling, and advanced features like variants and
-          staggered animations, it is an excellent choice for developers looking
-          to enhance their user interfaces with smooth and engaging animations.
+          With the concept of variants, Framer Motion enables developers to
+          define a set of shared animation states that multiple elements can
+          inherit. This helps maintain consistency and reduces repetition in
+          your animation definitions across a component tree.
+        </p>
+
+        <p>
+          Framer Motion also supports layout animations using the{" "}
+          <code>layout</code> prop. When you toggle elements in and out of the
+          DOM, the library animates them smoothly between positions, which
+          greatly enhances the visual experience of lists, grids, and cards.
+        </p>
+
+        <p>
+          Performance is a major focus of Framer Motion. It uses the{" "}
+          <code>requestAnimationFrame</code> API and runs animations off the
+          main thread when possible, ensuring that transitions feel smooth even
+          on low-powered devices or complex UIs.
+        </p>
+
+        <p>
+          Developers can combine Framer Motion with UI frameworks like Tailwind
+          CSS or Chakra UI to build custom animations that align perfectly with
+          their existing design systems. The library's flexibility allows it to
+          adapt to nearly any styling approach or component structure.
+        </p>
+
+        <p>
+          Whether you are building simple fade-in effects or highly interactive
+          micro-interactions, Framer Motion gives you the tools to create
+          delightful user experiences with minimal effort. Its modern
+          architecture and well-maintained documentation make it a top choice
+          for frontend developers.
         </p>
       </div>
     </>
