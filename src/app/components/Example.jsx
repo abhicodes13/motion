@@ -28,7 +28,7 @@ export const Example = () => {
 
 const Sidebar = () => {
   const { isAuthenticated, user } = useKindeAuth();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
   return (
