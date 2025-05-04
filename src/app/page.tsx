@@ -13,7 +13,7 @@ import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import { redirect } from "next/navigation";
 
-const COLORS_TOP = ["#11FFAA", "#1E63C6", "#2E84CF", "#DD535C"];
+const COLORS_TOP = ["#1E63C6", "#2E84CF", "#CF9FFF", "#BDB5D5"];
 
 export default function AuroraHero() {
   const { isAuthenticated } = useKindeAuth();
@@ -69,7 +69,7 @@ export default function AuroraHero() {
 
         <div className="absolute inset-0 z-0">
           <Canvas>
-            <Stars radius={50} count={2500} factor={4} fade speed={2} />
+            <Stars radius={50} count={500} factor={4} fade speed={5} />
           </Canvas>
         </div>
       </motion.section>
