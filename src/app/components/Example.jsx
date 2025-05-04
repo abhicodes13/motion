@@ -41,7 +41,7 @@ const Sidebar = () => {
     >
       <TitleSection open={open} />
       {isAuthenticated && (
-        <LogoutLink className="text-sm bg-black block p-2 text-white hover:opacity-90 ">
+        <LogoutLink className="text-sm bg-black block p-1 md:p-2 text-white hover:opacity-90 transition-all duration-200">
           Logout
         </LogoutLink>
       )}
