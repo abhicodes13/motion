@@ -8,15 +8,17 @@ const Page = () => {
   const { isAuthenticated } = useKindeAuth();
   if (!isAuthenticated) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-2xl font-bold mb-4">Welcome to the Home Page</h1>
+      <div className="flex flex-col items-center justify-center h-screen bg-slate-200">
+        <h1 className="text-2xl font-bold mb-1">Welcome to the ScrollRead</h1>
         <p className="mb-4">Please log in to access the content.</p>
-        <LoginLink className="bg-black rounded-[5px] text-white px-2 py-1 mb-5">
-          Login
-        </LoginLink>
-        <RegisterLink className="bg-black rounded-[5px] text-white px-2 py-1 ">
-          Register
-        </RegisterLink>
+        <div className="flex gap-2 mt-4">
+          <LoginLink className="bg-black rounded-[5px] text-white  p-3 hover:opacity-75">
+            Login
+          </LoginLink>
+          <RegisterLink className="bg-black rounded-[5px] text-white p-3 hover:opacity-75">
+            Register
+          </RegisterLink>
+        </div>
       </div>
     );
   }
