@@ -49,22 +49,24 @@ export default function AuroraHero() {
           <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
             Checkout what building here at ScrollRead
           </p>
-          <motion.button
-            style={{
-              border,
-              boxShadow,
-            }}
-            whileHover={{
-              scale: 1.015,
-            }}
-            whileTap={{
-              scale: 0.985,
-            }}
-            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-          >
-            <LoginLink>Login </LoginLink>
-            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-          </motion.button>
+          <LoginLink>
+            Login
+            <motion.button
+              style={{
+                border,
+                boxShadow,
+              }}
+              whileHover={{
+                scale: 1.015,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+              className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+            >
+              <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+            </motion.button>
+          </LoginLink>
         </div>
 
         <div className="absolute inset-0 z-0">
