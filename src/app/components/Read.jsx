@@ -9,7 +9,7 @@ import {
 } from "@kinde-oss/kinde-auth-nextjs/components";
 
 const Read = () => {
-  const { user, isAuthenticated } = useKindeAuth();
+  const { isAuthenticated } = useKindeAuth();
 
   if (!isAuthenticated) {
     return (
