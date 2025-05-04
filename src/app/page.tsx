@@ -47,7 +47,7 @@ export default function AuroraHero() {
             Welcome to ScrollRead
           </h1>
           <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-            Checkout what we're building here at ScrollRead
+            Checkout what building here at ScrollRead
           </p>
           <motion.button
             style={{
