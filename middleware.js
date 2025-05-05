@@ -12,7 +12,7 @@ const redis = new Redis({
 // Step 2: Set up rate limiter (10 requests per 10 seconds)
 const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(10, "10s"),
+  limiter: Ratelimit.slidingWindow(5, "10s"),
   analytics: true,
 });
 
@@ -25,7 +25,6 @@ export default withAuth(
     if (!success) {
       return new NextResponse("Too many requests", { status: 429 });
     }
-
     // Allow request through
     return NextResponse.next();
   },
