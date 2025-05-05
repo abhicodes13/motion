@@ -29,7 +29,7 @@ export default withAuth(
     return NextResponse.next();
   },
   {
-    publicPaths: ["/"], // Let homepage remain public
+    // Let homepage remain public
   }
 );
 
