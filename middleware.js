@@ -49,7 +49,6 @@ export default withAuth(
   },
   {
     // Public paths that don't require authentication
-    publicPaths: ["/"],
   }
 );
 
