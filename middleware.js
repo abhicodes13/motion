@@ -23,13 +23,13 @@ export default withAuth(
 
     const { success } = await ratelimit.limit(ip.toString());
     if (!success) {
-      return new NextResponse("Too many requests", { status: 429 });
+      return NextResponse.redirect(new URL("/429", req.url));
     }
     // Allow request through
     return NextResponse.next();
   },
   {
-    publicPaths: ["/"], // Let homepage remain public
+    publicPaths: ["/", "/429"], // Let homepage remain public
   }
 );
 
