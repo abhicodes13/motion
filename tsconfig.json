@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/AuthProvider.jsx"
-  ],
+    "app/AuthProvider.jsx"
+, "middleware.js", "middleware.js"  ],
   "exclude": ["node_modules"]
 }
