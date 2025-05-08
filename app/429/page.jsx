@@ -22,8 +22,8 @@ export default function RateLimitPage() {
       <p style={{ marginTop: "1rem", marginBottom: "1rem" }}>
         You’ve hit the rate limit. Please slow down and try again later.
       </p>
-      <a href="/">
-        <button className="bg-purple-600 mt-3 p-2 hover:opacity-70 rounded-md text-white">
+      <a href="/" className="z-10">
+        <button className="bg-purple-600 mt-3 px-4 py-1 hover:opacity-70 rounded-md text-white">
           Go back
         </button>
       </a>
