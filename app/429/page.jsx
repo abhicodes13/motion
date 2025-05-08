@@ -1,6 +1,8 @@
 // app/429/page.jsx
+"use client";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+
 export default function RateLimitPage() {
   return (
     //Page for when too many requests hit from client side
