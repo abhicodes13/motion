@@ -9,10 +9,10 @@ const redis = new Redis({
   token: process.env.UPSTASH_REDIS_REST_TOKEN,
 });
 
-// Step 2: Set up rate limiter (10 requests per 10 seconds)
+// Step 2: Set up rate limiter (20 requests per 3 mins)
 const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(15, "1m"),
+  limiter: Ratelimit.slidingWindow(20, "3m"),
   analytics: true,
 });
 
