@@ -5,8 +5,6 @@ import { Canvas } from "@react-three/fiber";
 
 export default function RateLimitPage() {
   return (
-    //Page for when too many requests hit from client side
-
     <div
       style={{ padding: "3rem", textAlign: "center" }}
       className="bg-black text-white h-screen flex flex-col gap-3 justify-center items-center z-10"
@@ -24,7 +22,7 @@ export default function RateLimitPage() {
       </p>
       <a href="/" className="z-10">
         <button className="bg-purple-600 mt-3 px-4 py-1 hover:opacity-70 rounded-md text-white">
-          Go back
+          Go back to homepage
         </button>
       </a>
       <div className="absolute inset-0 z-0">
