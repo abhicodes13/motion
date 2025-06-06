@@ -12,7 +12,7 @@ const redis = new Redis({
 // Step 2: Set up rate limiter (20 requests per 3 mins)
 const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(20, "3m"),
+  limiter: Ratelimit.slidingWindow(20, "2m"),
   analytics: true,
 });
 
